@@ -31,6 +31,10 @@
     var d = new Date(s + "T00:00:00Z");
     return d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
   }
+  function fmtShort(s) {
+    var d = new Date(s + "T00:00:00Z");
+    return d.toLocaleDateString("en-GB", { day: "numeric", month: "short", timeZone: "UTC" });
+  }
   function count(topic) {
     return D.items.filter(function (i) { return topic === "all" || i.topic === topic; }).length;
   }
@@ -61,7 +65,7 @@
   }
 
   function media(i) {
-    var a = el("a", "media" + (i.card ? " card" : ""));
+    var a = el("a", "media");
     a.href = i.repo ? "https://github.com/" + i.repo : "#";
     a.tabIndex = -1;
     a.setAttribute("aria-hidden", "true");
@@ -75,7 +79,9 @@
     img.loading = "lazy";
     img.decoding = "async";
     img.addEventListener("error", fallback);
-    a.append(img);
+    var frame = el("div", "frame");
+    frame.append(img);
+    a.append(frame);
     if (i.gif && !reduce) {
       var still = i.img;
       var swap = function (on) { img.src = on ? i.gif : still; };
@@ -89,20 +95,28 @@
     var art = el("article", "item" + (lead ? " lead" : ""));
     var m = media(i);
     var body = el("div", "body");
-    body.append(el("p", "kicker", (lead ? "Start here · " : "") + TOPIC[i.topic]));
+    var row = el("div", "titlerow");
     var h = el("h3");
     var link = el("a", null, i.name);
     link.href = "https://github.com/" + i.repo;
     link.target = "_blank";
     link.rel = "noopener";
     h.append(link);
-    body.append(h, el("p", "owner", i.owner));
-    body.append(el("p", "text", i.text));
+    row.append(h, el("span", "tag", TOPIC[i.topic]));
+    body.append(row, el("p", "text", i.text));
     var meta = el("p", "meta");
-    meta.append(el("span", null, i.stars.toLocaleString("en-US") + " stars"));
-    var lic = el("span", i.license === "none" || i.license === "NOASSERTION" ? "warn" : null,
-      i.license === "NOASSERTION" ? "licence unclear" : i.license === "none" ? "no licence" : i.license);
-    meta.append(lic, el("span", null, "created " + fmtDate(i.created)), el("span", null, "updated " + fmtDate(i.pushed)));
+    var unclear = i.license === "none" || i.license === "NOASSERTION";
+    var parts = [
+      el("span", "author", i.owner),
+      el("span", null, i.stars.toLocaleString("en-US") + " stars"),
+      el("span", unclear ? "warn" : null, i.license === "NOASSERTION" ? "licence unclear" : i.license === "none" ? "no licence" : i.license),
+      el("span", null, "created " + fmtShort(i.created)),
+      el("span", null, "updated " + fmtShort(i.pushed))
+    ];
+    parts.forEach(function (p, n) {
+      if (n) meta.append(" · ");
+      meta.append(p);
+    });
     body.append(meta);
     var links = el("div", "links");
     var gh = el("a", null, "Open on GitHub");

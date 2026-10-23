@@ -94,8 +94,7 @@ button, input { font: inherit; color: inherit; }
 /* layout */
 .layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 0 56px; align-items: start; }
 .rail { position: sticky; top: 96px; display: flex; flex-direction: column; gap: 4px; padding-bottom: 24px; }
-.rail h2 { font: 500 13px var(--sans); color: var(--muted); margin: 20px 0 4px; }
-.rail h2:first-of-type { margin-top: 0; }
+.rail h2 { font: 500 13px var(--sans); color: var(--muted); margin: 28px 0 6px 12px; }
 .chip {
   display: flex; justify-content: space-between; gap: 12px; align-items: baseline;
   width: 100%; text-align: left; background: transparent; border: 0; border-left: 2px solid transparent;
@@ -107,24 +106,22 @@ button, input { font: inherit; color: inherit; }
 
 /* items */
 .status { font: 13px var(--mono); color: var(--muted); margin: 0 0 8px; }
-.item { padding-block: 40px; border-top: 1px solid var(--line); display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 32px; align-items: start; }
+.item { padding-block: 32px; border-top: 1px solid var(--line); display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 32px; align-items: start; }
 .item:first-of-type { border-top: 0; padding-top: 8px; }
-.item.lead { grid-template-columns: 1fr; gap: 28px; padding-bottom: 56px; }
+/* One fixed 16:10 frame. The image fills it and is cropped to fit, from the top. */
 .media { display: block; position: relative; aspect-ratio: 16 / 10; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--surface); }
-.media img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
-.media.card img { object-fit: contain; object-position: center; background: #fff; }
-.lead .media { aspect-ratio: 16 / 8; }
+.frame { position: absolute; inset: 0; }
+.frame img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .fallback { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; text-align: center; font: 400 28px/1.2 var(--serif); color: var(--muted); overflow-wrap: anywhere; }
 .body { min-width: 0; }
-.kicker { font-size: 14px; color: var(--muted); margin: 0 0 8px; }
-.lead .kicker { color: var(--accent); font-weight: 600; }
-.item h3 { font: 400 clamp(26px, 3vw, 34px)/1.12 var(--serif); letter-spacing: -0.01em; margin: 0 0 4px; overflow-wrap: anywhere; }
-.lead h3 { font-size: clamp(34px, 5vw, 52px); }
+.titlerow { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px; margin: 0 0 12px; }
+.item h3 { font: 400 clamp(26px, 3vw, 34px)/1.12 var(--serif); letter-spacing: -0.01em; margin: 0; overflow-wrap: anywhere; }
 .item h3 a { text-decoration: none; }
 .item h3 a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; }
-.owner { font: 13px var(--mono); color: var(--muted); margin: 0 0 16px; }
-.item p.text { margin: 0 0 16px; max-width: 62ch; }
-.meta { font: 13px/1.6 var(--mono); color: var(--muted); margin: 0 0 16px; display: flex; flex-wrap: wrap; gap: 0 16px; }
+.tag { font: 500 12px/1 var(--sans); color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 5px 8px; white-space: nowrap; }
+.item p.text { margin: 0 0 12px; max-width: 62ch; }
+.meta { font: 12px/1.7 var(--mono); color: var(--muted); margin: 0 0 12px; }
+.meta .author { color: var(--ink); }
 .warn { color: var(--ink); text-decoration: underline wavy color-mix(in srgb, var(--accent) 60%, transparent); text-underline-offset: 4px; }
 .links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
 .links a { font-weight: 600; font-size: 15px; text-decoration: none; border-bottom: 1px solid var(--accent); padding-block: 10px 2px; }
@@ -156,7 +153,6 @@ button, input { font: inherit; color: inherit; }
   .intro { padding-block: 40px 32px; }
   .intro p { font-size: 15px; }
   .item { grid-template-columns: 1fr; gap: 20px; padding-block: 32px; }
-  .lead .media, .media { aspect-ratio: 16 / 10; }
   .search { order: 3; width: 100%; min-height: 44px; }
   .nav { display: none; }
   .top .wrap { padding-block: 8px; }
