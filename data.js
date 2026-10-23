@@ -328,7 +328,7 @@ window.RADAR={
    "license": "MIT",
    "created": "2026-08-13",
    "pushed": "2026-09-06",
-   "img": null,
+   "img": "img/Appllama__appllama-skills.jpg",
    "gif": null,
    "card": true
   },
