@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Craft Radar</title>
+<meta name="description" content="A hand-picked collection of open-source tools for designers and product people.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%2316181a%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%276%27 fill=%27none%27 stroke=%27%236fcf9f%27 stroke-width=%273%27/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#issue">Skip to the list</a>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Craft Radar</a>
+    <nav class="nav" aria-label="Page">
+      <a href="#issue">Issue 001</a>
+      <a href="#about">About</a>
+    </nav>
+    <label class="search">
+      <span class="visually-hidden">Search repositories</span>
+      <input id="q" type="search" placeholder="Search, e.g. motion or React" autocomplete="off" spellcheck="false">
+    </label>
+    <div class="theme" role="group" aria-label="Theme">
+      <button type="button" data-theme-set="auto" aria-pressed="true">Auto</button>
+      <button type="button" data-theme-set="light" aria-pressed="false">Light</button>
+      <button type="button" data-theme-set="dark" aria-pressed="false">Dark</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="intro" aria-labelledby="h1">
+    <h1 id="h1">Open-source tools for designers and product people, picked by hand.</h1>
+    <p>Skills, components and motion tools from GitHub, read one by one. Nothing here is ranked by stars, and each entry says what it does in plain words.</p>
+  </section>
+
+  <div class="layout" id="issue">
+    <nav class="rail" id="rail" aria-label="Topics"></nav>
+    <div>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+      <div id="list"></div>
+    </div>
+  </div>
+
+  <section class="about" id="about" aria-labelledby="about-h">
+    <h2 id="about-h">About</h2>
+    <div>
+      <p>Craft Radar is a short, curated list of open-source work for people who design and shape products. It is not a trending feed and not a directory of plugins.</p>
+      <p>Descriptions come from each repository's README. Stars, licences and dates were read from GitHub on <span id="foot-date"></span>. Entries have been read but not yet run, so treat them as leads to try, not as tested recommendations.</p>
+      <p>Some previews are the repository's own screenshots or demo frames. Where a repository has none, you see GitHub's generic card or a plain title tile. Licences differ: check each one before you reuse code.</p>
+    </div>
+  </section>
+
+  <footer class="foot">Craft Radar &middot; Issue 001 &middot; <span id="foot-date2"></span></footer>
+</main>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
