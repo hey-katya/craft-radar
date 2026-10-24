@@ -77,13 +77,13 @@ button, input { font: inherit; color: inherit; }
 .search {
   display: flex; align-items: center; gap: 8px;
   border: 1px solid var(--line); border-radius: 8px; background: var(--surface);
-  padding: 0 12px; min-height: 40px; width: 280px;
+  padding: 0 12px; min-height: 40px; width: 220px;
 }
 .search input { border: 0; background: transparent; width: 100%; min-width: 0; outline: none; padding: 8px 0; font-size: 15px; }
 .search input::placeholder { color: var(--muted); }
 .search:focus-within { outline: 2px solid var(--focus); outline-offset: 2px; }
 .theme { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; padding: 2px; background: var(--surface); }
-.theme button { border: 0; background: transparent; padding: 7px 12px; border-radius: 6px; cursor: pointer; font-size: 14px; color: var(--muted); min-height: 34px; }
+.theme button { border: 0; background: transparent; padding: 7px 9px; border-radius: 6px; cursor: pointer; font-size: 14px; color: var(--muted); min-height: 34px; }
 .theme button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
 
 /* intro */
@@ -138,6 +138,8 @@ button, input { font: inherit; color: inherit; }
 .about div p { margin: 0 0 16px; max-width: 62ch; }
 .about div p:last-child { margin-bottom: 0; }
 .foot { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); font: 13px var(--mono); color: var(--muted); }
+.foot a { color: var(--ink); text-underline-offset: 3px; }
+.foot a:hover { color: var(--accent); }
 
 /* widths between phone and desktop */
 @media (max-width: 1000px) {

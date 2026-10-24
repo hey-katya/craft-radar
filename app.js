@@ -179,7 +179,5 @@
     });
   });
 
-  document.getElementById("foot-date").textContent = fmtDate(D.date);
-  document.getElementById("foot-date2").textContent = fmtDate(D.date);
   render();
 })();
