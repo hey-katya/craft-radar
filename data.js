@@ -1,6 +1,6 @@
 window.RADAR={
  "issue": "001",
- "date": "2026-10-23",
+ "date": "2026-11-02",
  "items": [
   {
    "repo": "wheresryan22/anatomy",
@@ -15,7 +15,8 @@ window.RADAR={
    "pushed": "2026-10-18",
    "img": "img/wheresryan22__anatomy.jpg",
    "gif": null,
-   "card": false
+   "card": false,
+   "added": "2026-10-21"
   },
   {
    "repo": "lucasmarkes/hairline",
@@ -30,7 +31,8 @@ window.RADAR={
    "pushed": "2026-10-14",
    "img": "img/lucasmarkes__hairline.jpg",
    "gif": null,
-   "card": false
+   "card": false,
+   "added": "2026-10-21"
   },
   {
    "repo": "Aryanutkarsh/SeeCode",
@@ -45,7 +47,8 @@ window.RADAR={
    "pushed": "2026-10-17",
    "img": "img/Aryanutkarsh__SeeCode.jpg",
    "gif": "img/Aryanutkarsh__SeeCode.gif",
-   "card": false
+   "card": false,
+   "added": "2026-10-21"
   },
   {
    "repo": "QingYunA/answer-me-with-html",
@@ -60,7 +63,8 @@ window.RADAR={
    "pushed": "2026-10-22",
    "img": "img/QingYunA__answer-me-with-html.jpg",
    "gif": null,
-   "card": false
+   "card": false,
+   "added": "2026-10-21"
   },
   {
    "repo": "miqdadbadjuber/anti-slop",
@@ -75,7 +79,8 @@ window.RADAR={
    "pushed": "2026-10-23",
    "img": "img/miqdadbadjuber__anti-slop.jpg",
    "gif": null,
-   "card": true
+   "card": true,
+   "added": "2026-10-21"
   },
   {
    "repo": "madebymustafa/design-taste",
@@ -90,7 +95,8 @@ window.RADAR={
    "pushed": "2026-08-15",
    "img": "img/madebymustafa__design-taste.jpg",
    "gif": null,
-   "card": false
+   "card": false,
+   "added": "2026-10-21"
   },
   {
    "repo": "oil-oil/oil-ui",
@@ -105,7 +111,56 @@ window.RADAR={
    "pushed": "2026-10-23",
    "img": "img/oil-oil__oil-ui.jpg",
    "gif": null,
-   "card": false
+   "card": false,
+   "added": "2026-10-21"
+  },
+  {
+   "repo": "Leonxlnx/taste-skill",
+   "owner": "Leonxlnx",
+   "name": "taste-skill",
+   "topic": "taste",
+   "text": "An agent skill that makes coding agents design websites and app screens instead of assembling the average landing page. It gives the agent an art direction, real credited photographs and a way to check its own work in a real browser.",
+   "demo": "https://tasteskill.dev",
+   "stars": 108434,
+   "license": "MIT",
+   "created": "2026-02-19",
+   "pushed": "2026-10-31",
+   "img": "img/Leonxlnx__taste-skill.jpg",
+   "card": false,
+   "gif": null,
+   "added": "2026-11-02"
+  },
+  {
+   "repo": "Nutlope/hallmark",
+   "owner": "Nutlope",
+   "name": "hallmark",
+   "topic": "taste",
+   "text": "A design skill that refuses to look AI-generated. It deals three themes from a catalogue of fifty, builds the page around what the visitor came to do, and lints the result in a real browser against known machine-made tells.",
+   "demo": "https://www.usehallmark.com/",
+   "stars": 45671,
+   "license": "MIT",
+   "created": "2026-04-27",
+   "pushed": "2026-10-29",
+   "img": "img/Nutlope__hallmark.jpg",
+   "card": false,
+   "gif": null,
+   "added": "2026-11-02"
+  },
+  {
+   "repo": "pbakaus/impeccable",
+   "owner": "pbakaus",
+   "name": "impeccable",
+   "topic": "taste",
+   "text": "A design vocabulary for your coding agent. You steer with commands such as polish and bolder, review with critique and audit, and catch AI slop before it ships. The README compares the same brief built with and without it.",
+   "demo": "https://impeccable.style",
+   "stars": 100156,
+   "license": "Apache-2.0",
+   "created": "2025-11-16",
+   "pushed": "2026-11-02",
+   "img": "img/pbakaus__impeccable.jpg",
+   "card": false,
+   "gif": null,
+   "added": "2026-11-02"
   },
   {
    "repo": "shadcn-ui/lint",
@@ -120,7 +175,8 @@ window.RADAR={
    "pushed": "2026-10-19",
    "img": "img/shadcn-ui__lint.jpg",
    "gif": null,
-   "card": false
+   "card": false,
+   "added": "2026-10-21"
   },
   {
    "repo": "deeplethe/solid-glass",
@@ -135,7 +191,8 @@ window.RADAR={
    "pushed": "2026-10-22",
    "img": "img/deeplethe__solid-glass.jpg",
    "gif": null,
-   "card": false
+   "card": false,
+   "added": "2026-10-21"
   },
   {
    "repo": "kuratlielia/arc-library",
@@ -150,7 +207,8 @@ window.RADAR={
    "pushed": "2026-10-23",
    "img": "img/kuratlielia__arc-library.jpg",
    "gif": null,
-   "card": false
+   "card": false,
+   "added": "2026-10-21"
   },
   {
    "repo": "flohoeller/affectui",
@@ -165,7 +223,8 @@ window.RADAR={
    "pushed": "2026-10-23",
    "img": "img/flohoeller__affectui.jpg",
    "gif": null,
-   "card": false
+   "card": false,
+   "added": "2026-10-21"
   },
   {
    "repo": "thesysdev/open-intelligent-ui",
@@ -180,7 +239,8 @@ window.RADAR={
    "pushed": "2026-10-17",
    "img": "img/thesysdev__open-intelligent-ui.jpg",
    "gif": null,
-   "card": false
+   "card": false,
+   "added": "2026-10-21"
   },
   {
    "repo": "nateherkai/scroll-craft",
@@ -195,7 +255,40 @@ window.RADAR={
    "pushed": "2026-09-30",
    "img": "img/nateherkai__scroll-craft.jpg",
    "gif": null,
-   "card": false
+   "card": false,
+   "added": "2026-10-21"
+  },
+  {
+   "repo": "ZSeven-W/openpencil",
+   "owner": "ZSeven-W",
+   "name": "openpencil",
+   "topic": "systems",
+   "text": "An open-source vector design tool built for AI agents. You describe a UI in plain language and it appears on an infinite canvas, and you can select elements and ask for changes. It includes a built-in MCP server and design-as-code.",
+   "demo": "https://op.zseven.tech",
+   "stars": 7027,
+   "license": "MIT",
+   "created": "2026-02-17",
+   "pushed": "2026-11-02",
+   "img": "img/ZSeven-W__openpencil.jpg",
+   "card": false,
+   "gif": null,
+   "added": "2026-11-02"
+  },
+  {
+   "repo": "abdiraimov-otabek/dashboard-design-skill",
+   "owner": "abdiraimov-otabek",
+   "name": "dashboard-design-skill",
+   "topic": "systems",
+   "text": "A Claude Code skill for building, redesigning and critiquing dashboards: KPI cards, charts, date pickers, filters and empty states, on the web or in SwiftUI. It ends every job with a screenshot check of what is actually on screen.",
+   "demo": null,
+   "stars": 210,
+   "license": "MIT",
+   "created": "2026-10-20",
+   "pushed": "2026-10-28",
+   "img": "img/abdiraimov-otabek__dashboard-design-skill.jpg",
+   "card": false,
+   "gif": null,
+   "added": "2026-11-02"
   },
   {
    "repo": "guillermolg00/morphicons",
@@ -210,7 +303,8 @@ window.RADAR={
    "pushed": "2026-10-19",
    "img": "img/guillermolg00__morphicons.jpg",
    "gif": "img/guillermolg00__morphicons.gif",
-   "card": false
+   "card": false,
+   "added": "2026-10-21"
   },
   {
    "repo": "jeremy-prt/bloub",
@@ -225,7 +319,8 @@ window.RADAR={
    "pushed": "2026-08-17",
    "img": "img/jeremy-prt__bloub.jpg",
    "gif": "img/jeremy-prt__bloub.gif",
-   "card": false
+   "card": false,
+   "added": "2026-10-21"
   },
   {
    "repo": "rossark0/rossark-motion-skill",
@@ -240,7 +335,8 @@ window.RADAR={
    "pushed": "2026-10-22",
    "img": "img/rossark0__rossark-motion-skill.jpg",
    "gif": "img/rossark0__rossark-motion-skill.gif",
-   "card": false
+   "card": false,
+   "added": "2026-10-21"
   },
   {
    "repo": "lovisdotio/motion2code",
@@ -255,7 +351,8 @@ window.RADAR={
    "pushed": "2026-10-20",
    "img": "img/lovisdotio__motion2code.jpg",
    "gif": "img/lovisdotio__motion2code.gif",
-   "card": false
+   "card": false,
+   "added": "2026-10-21"
   },
   {
    "repo": "enesozturk/thinking-logos",
@@ -270,7 +367,40 @@ window.RADAR={
    "pushed": "2026-08-30",
    "img": "img/enesozturk__thinking-logos.jpg",
    "gif": null,
-   "card": false
+   "card": false,
+   "added": "2026-10-21"
+  },
+  {
+   "repo": "NiazMorshed2007/reanimate",
+   "owner": "NiazMorshed2007",
+   "name": "reanimate",
+   "topic": "motion",
+   "text": "A Claude Code skill that reverse-engineers animations from a live site, a screen recording, a video, a GIF or a Lottie file. It records the original, rebuilds it in code, records the copy the same way and compares the two until the numbers match.",
+   "demo": null,
+   "stars": 868,
+   "license": "MIT",
+   "created": "2026-10-29",
+   "pushed": "2026-10-31",
+   "img": "img/NiazMorshed2007__reanimate.jpg",
+   "card": false,
+   "gif": null,
+   "added": "2026-11-02"
+  },
+  {
+   "repo": "Moh4696/open-3d-skills",
+   "owner": "Moh4696",
+   "name": "open-3d-skills",
+   "topic": "motion",
+   "text": "Eight agent skills for 3D and animated websites: three.js scenes from code, scroll-scrubbed films, transparent video that plays in Safari and characters that follow the cursor. The skills also check the work in real browsers.",
+   "demo": null,
+   "stars": 169,
+   "license": "MIT",
+   "created": "2026-10-31",
+   "pushed": "2026-10-31",
+   "img": "img/Moh4696__open-3d-skills.jpg",
+   "card": false,
+   "gif": null,
+   "added": "2026-11-02"
   },
   {
    "repo": "alchaincyf/huashu-motion",
@@ -285,7 +415,24 @@ window.RADAR={
    "pushed": "2026-10-22",
    "img": "img/alchaincyf__huashu-motion.jpg",
    "gif": null,
-   "card": false
+   "card": false,
+   "added": "2026-10-21"
+  },
+  {
+   "repo": "heygen-com/hyperframes",
+   "owner": "heygen-com",
+   "name": "hyperframes",
+   "topic": "video",
+   "text": "An open-source framework for turning HTML, CSS, media and seekable animations into deterministic MP4 videos. Use it from the command line, or from coding agents through skills or a Claude Code plugin.",
+   "demo": "https://hyperframes.heygen.com",
+   "stars": 77523,
+   "license": "Apache-2.0",
+   "created": "2026-03-10",
+   "pushed": "2026-11-02",
+   "img": "img/heygen-com__hyperframes.jpg",
+   "card": false,
+   "gif": null,
+   "added": "2026-11-02"
   },
   {
    "repo": "shadcn-labs/snapcn",
@@ -300,7 +447,8 @@ window.RADAR={
    "pushed": "2026-10-22",
    "img": "img/shadcn-labs__snapcn.jpg",
    "gif": null,
-   "card": false
+   "card": false,
+   "added": "2026-10-21"
   },
   {
    "repo": "Alexwtlf/agentic-product-demo",
@@ -315,7 +463,8 @@ window.RADAR={
    "pushed": "2026-08-27",
    "img": "img/Alexwtlf__agentic-product-demo.jpg",
    "gif": null,
-   "card": false
+   "card": false,
+   "added": "2026-10-21"
   },
   {
    "repo": "Appllama/appllama-skills",
@@ -330,7 +479,8 @@ window.RADAR={
    "pushed": "2026-09-06",
    "img": "img/Appllama__appllama-skills.jpg",
    "gif": null,
-   "card": true
+   "card": true,
+   "added": "2026-10-21"
   },
   {
    "repo": "alextnetto/res",
@@ -345,7 +495,8 @@ window.RADAR={
    "pushed": "2026-10-17",
    "img": "img/alextnetto__res.jpg",
    "gif": null,
-   "card": false
+   "card": false,
+   "added": "2026-10-21"
   },
   {
    "repo": "Tranz007/ux-skills",
@@ -360,7 +511,8 @@ window.RADAR={
    "pushed": "2026-09-04",
    "img": "img/Tranz007__ux-skills.jpg",
    "gif": null,
-   "card": false
+   "card": false,
+   "added": "2026-10-21"
   },
   {
    "repo": "IamBlum/pm-copilot",
@@ -375,7 +527,24 @@ window.RADAR={
    "pushed": "2026-09-20",
    "img": "img/IamBlum__pm-copilot.jpg",
    "gif": null,
-   "card": true
+   "card": true,
+   "added": "2026-10-21"
+  },
+  {
+   "repo": "alextraykov/glyph-kit",
+   "owner": "alextraykov",
+   "name": "glyph-kit",
+   "topic": "product",
+   "text": "A skill that draws product-design work as figures: research results, funnels, flows, roadmaps, wireframes and motion specs. The agent writes a small spec and code draws the figure, so the bars always match their numbers.",
+   "demo": "https://traykov.cc/glyph-kit",
+   "stars": 75,
+   "license": "MIT",
+   "created": "2026-10-19",
+   "pushed": "2026-11-01",
+   "img": "img/alextraykov__glyph-kit.jpg",
+   "card": false,
+   "gif": null,
+   "added": "2026-11-02"
   }
  ]
-};
+}
