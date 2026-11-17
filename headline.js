@@ -58,6 +58,8 @@
     svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttribute("class", "rv-u");
     svg.setAttribute("aria-hidden", "true");
+    svg.style.cssText = "position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible;pointer-events:none";
+    h.style.position = "relative";
     h.appendChild(svg);
     lines.forEach(function (l) {
       var x1 = l.x1 - box.left - 1, x2 = l.x2 - box.left + 1, dx = x2 - x1;
@@ -66,6 +68,10 @@
       p.setAttribute("d", "M " + x1 + " " + base + " C " + (x1 + dx * 0.24) + " " + (base - wob) + ", " +
         (x1 + dx * 0.54) + " " + (base + wob) + ", " + (x1 + dx * 0.73) + " " + base + " S " + (x2 - 8) + " " +
         (base + wob * 0.4) + ", " + x2 + " " + (base + wob));
+      p.setAttribute("fill", "none");
+      p.setAttribute("stroke-width", "2.5");
+      p.setAttribute("stroke-linecap", "round");
+      p.style.stroke = "var(--accent, #1f6b4f)";
       svg.appendChild(p);
       var len = p.getTotalLength();
       p.style.strokeDasharray = len + " " + (len + 1);

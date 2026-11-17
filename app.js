@@ -14,7 +14,8 @@
   var TOPIC = {};
   GROUPS.forEach(function (g) { g.topics.forEach(function (t) { TOPIC[t[0]] = t[1]; }); });
 
-  var state = { topic: "all", q: "", sort: "new" };
+  var PER_PAGE = 10;
+  var state = { topic: "all", q: "", sort: "new", page: 1 };
   var rail = document.getElementById("rail");
   var list = document.getElementById("list");
   var status = document.getElementById("status");
@@ -48,7 +49,7 @@
       b.setAttribute("aria-pressed", String(state.topic === key));
       b.append(el("span", "lab", label), el("span", "n", String(count(key))));
       b.addEventListener("click", function () {
-        state.topic = key; render();
+        state.topic = key; state.page = 1; render();
         var top = document.getElementById("issue").getBoundingClientRect().top;
         if (top < 0) document.getElementById("issue").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
       });
@@ -156,20 +157,59 @@
         el("p", null, "No repository in Issue " + D.issue + " contains \u201c" + state.q + "\u201d" + (state.topic !== "all" ? " under " + TOPIC[state.topic] : "") + ". Try a shorter word or clear the filters."));
       var b = el("button", null, "Clear filters");
       b.type = "button";
-      b.addEventListener("click", function () { state.topic = "all"; state.q = ""; search.value = ""; render(); });
+      b.addEventListener("click", function () { state.topic = "all"; state.q = ""; state.page = 1; search.value = ""; render(); });
       e.append(b);
       list.append(e);
       return;
     }
-    shown.forEach(function (i, n) { list.append(item(i, false)); });
+    var pages = Math.max(1, Math.ceil(shown.length / PER_PAGE));
+    if (state.page > pages) state.page = pages;
+    shown.slice((state.page - 1) * PER_PAGE, state.page * PER_PAGE).forEach(function (i) { list.append(item(i, false)); });
+    pager(pages);
   }
 
-  search.addEventListener("input", function () { state.q = search.value.trim(); render(); });
+  var pagerEl = document.createElement("nav");
+  pagerEl.className = "pager";
+  pagerEl.setAttribute("aria-label", "Pages");
+  list.parentNode.append(pagerEl);
+
+  function goTo(n) {
+    state.page = n;
+    render();
+    var issue = document.getElementById("issue");
+    if (issue.getBoundingClientRect().top < 0)
+      issue.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+  }
+
+  function pager(pages) {
+    pagerEl.replaceChildren();
+    pagerEl.hidden = pages < 2;
+    if (pages < 2) return;
+    function btn(label, n, opts) {
+      var b = el("button", "pg", label);
+      b.type = "button";
+      if (opts && opts.label) b.setAttribute("aria-label", opts.label);
+      if (opts && opts.disabled) b.disabled = true;
+      if (n === state.page && !(opts && opts.nav)) b.setAttribute("aria-current", "page");
+      else b.addEventListener("click", function () { goTo(n); });
+      return b;
+    }
+    pagerEl.append(btn("Previous", state.page - 1, { nav: true, disabled: state.page === 1 }));
+    var shownPages = [];
+    for (var p = 1; p <= pages; p++) if (pages <= 7 || p === 1 || p === pages || Math.abs(p - state.page) <= 1) shownPages.push(p);
+    shownPages.forEach(function (p, n) {
+      if (n && p - shownPages[n - 1] > 1) pagerEl.append(el("span", "pg-gap", "\u2026"));
+      pagerEl.append(btn(String(p), p, { label: "Page " + p }));
+    });
+    pagerEl.append(btn("Next", state.page + 1, { nav: true, disabled: state.page === pages }));
+  }
+
+  search.addEventListener("input", function () { state.q = search.value.trim(); state.page = 1; render(); });
   search.addEventListener("keydown", function (ev) {
-    if (ev.key === "Escape") { search.value = ""; state.q = ""; render(); }
+    if (ev.key === "Escape") { search.value = ""; state.q = ""; state.page = 1; render(); }
   });
 
-  document.getElementById("sort").addEventListener("change", function (ev) { state.sort = ev.target.value; render(); });
+  document.getElementById("sort").addEventListener("change", function (ev) { state.sort = ev.target.value; state.page = 1; render(); });
 
   /* theme: follows the system until the button is used, then the choice is saved */
   var themeBtn = document.getElementById("theme");
