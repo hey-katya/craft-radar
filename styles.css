@@ -163,6 +163,15 @@ html:not(.js) .theme { display: none; }
 .empty button { transition: opacity var(--soft) ease, transform 0.12s ease; background: var(--ink); color: var(--paper); border: 0; border-radius: 8px; padding: 12px 18px; cursor: pointer; min-height: 44px; }
 
 /* about, footer */
+.subscribe { margin-top: 56px; padding-block: 56px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 0 56px; }
+.subscribe h2 { font: 400 28px/1.2 var(--serif); margin: 0; }
+.subscribe div p { margin: 0 0 20px; max-width: 62ch; }
+.sub-btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 10px; background: var(--ink); color: var(--paper); font: 500 15px/1 var(--sans); text-decoration: none; transition: opacity var(--soft) var(--ease), transform 0.16s var(--ease); }
+.sub-btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+@media (hover: hover) and (pointer: fine) { .sub-btn:hover { opacity: 0.86; } }
+.sub-btn:active { transform: scale(0.98); }
+.subscribe + .about { margin-top: 56px; }
+@media (max-width: 720px) { .subscribe { grid-template-columns: 1fr; gap: 16px; } }
 .about { margin-top: 56px; padding-block: 56px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 0 56px; }
 .about h2 { font: 400 28px/1.2 var(--serif); margin: 0; }
 .about div p { margin: 0 0 16px; max-width: 62ch; }
